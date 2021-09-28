@@ -189,29 +189,29 @@
 function reverseString(str){
     let reversedStr=str.split('').reverse().join('');
     return reversedStr;
-  }
+}
   
-  //Challenge 2: Validate a palindrom;
-  function isPalindrome(str){
+//Challenge 2: Validate a palindrom;
+function isPalindrome(str){
     let checked = str.split('').reverse().join('')
     if (str===checked){
       return 'Is Palindrome'
     } else{
       return 'Is not Palindrome'
     }
-  }
+}
   
-  //Challenge 3: Reverse an integer + add the negative sign with Math.sign()
-  function reverseInt(int){
+//Challenge 3: Reverse an integer + add the negative sign with Math.sign()
+function reverseInt(int){
     const revStr = int.toString().split('').reverse().join('')
     const revNum = parseInt(revStr) * Math.sign(int);
     return revNum;
   
-  }
+}
   
-  //Challenge 4: Capitalize Letters
-  // Return a string with the first letter of every word capitalized;
-  function capitalizeLetter(str){
+//Challenge 4: Capitalize Letters
+// Return a string with the first letter of every word capitalized;
+function capitalizeLetter(str){
     // with for loop:
     //  const strArr = str.toLowerCase().split(' ');
   
@@ -228,13 +228,13 @@ function reverseString(str){
      )
      .join(' ');
   
-     //with regex:
+  //with regex:
 
 
-    //  New comment!
-  }
-  const outPut = capitalizeLetter('i love javascript');
-  console.log(outPut)
+   //  New comment!
+}
+const outPut = capitalizeLetter('i love javascript');
+console.log(outPut)
   
   
   
@@ -248,17 +248,17 @@ function reverseString(str){
   
   
   
-  // function descendingOrder(n){
-  //   let numToStrArr = n.toString().split('').map((n) => parseInt(n));
-  //   // console.log(numToStrArr)
-  //   let sortedArr = numToStrArr.sort((a,b)=>b-a);
-  //   let arr1 = sortedArr.map((a)=> a.toString()).join('');
-  //   let reversedInt = parseInt(arr1);
-  //   console.log(arr1);
-  //   // console.log(sortedArr);
-  //   // console.log(finalRes);
-  // }
+// function descendingOrder(n){
+//   let numToStrArr = n.toString().split('').map((n) => parseInt(n));
+//   // console.log(numToStrArr)
+//   let sortedArr = numToStrArr.sort((a,b)=>b-a);
+//   let arr1 = sortedArr.map((a)=> a.toString()).join('');
+//   let reversedInt = parseInt(arr1);
+//   console.log(arr1);
+//   // console.log(sortedArr);
+//   // console.log(finalRes);
+// }
   
   
-  // const outPut = sumDigits(6262);
+// const outPut = sumDigits(6262);
   // console.log(outPut)
