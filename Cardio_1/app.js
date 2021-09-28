@@ -182,11 +182,9 @@
 
 // /////////////// Exercises ////////////////////////////////////////////////////////////////////
 
-
 // Challenge 1: Reverse a String
 //Return a string in reverse
 // ex. reverseString('hello')==='olleh';
-
 function reverseString(str){
     let reversedStr=str.split('').reverse().join('');
     return reversedStr;
@@ -222,12 +220,26 @@ function capitalizeLetter(str){
     //   } 
     //  return strArr.join(' ');
     //////////////////////////////////////////////////////////////////////////////////////////////////////////
-    return str
-     .toLowerCase()
-     .split(' ')
-     .map(word=> word[0].toUpperCase() + word.substr(1)
-     )
-     .join(' ');
+  // return str
+  //   .toLowerCase()
+  //   .split(' ')
+  //   .map(word=> word[0].toUpperCase() + word.substr(1)
+  //   )
+  //   .join(' ');
+  ///////////////////////////////////////////
+  //with regex:
+  return str.replace(/\b[a-z]/gi, function(char){
+    return char.toUpperCase(); 
+
+  });
+  //  New comment!
+};
+
+///////////////////////////////////////////////////////////////////
+//Challenge 5: Max Character
+// Return the character that is most common in a string 
+// ex. maxCharacter('javascript )=== 'a';
+function maxCharacter(str) {
   
   //with regex:
 
