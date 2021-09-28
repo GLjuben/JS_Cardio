@@ -260,7 +260,7 @@ function maxCharacter(str) {
   return maxChar;
 }
 
-//Challenge 6: fizzbuzz;
+// Challenge 6: fizzbuzz;
 // Write a program that prints all the numbers from 1 to 100. For multiples of 3,instead of the number, print "Fizz",for the multiples of 5 print "Buzz".
 // For numbers which are multiple of 3 and 5, print "FizzBuzz".
 function fizzBuzz() {
@@ -277,7 +277,18 @@ function fizzBuzz() {
  }
 }
 const outPut = fizzBuzz();
-// console.log(outPut)
+console.log(outPut)
+
+// function digitize(n) {
+//   //code here
+//   let str = n.toString();
+//   let arrOfStr= str.split('').reverse().join('')
+//   let reversedNum = parseInt(arrOfStr)
+//   console.log(reversedNum)
+//   return reversedNum
+// }
+
+digitize(2345123)
   
   
   
