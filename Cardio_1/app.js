@@ -232,12 +232,18 @@ function capitalizeLetter(str){
     return char.toUpperCase(); 
 
   });
-
-
-
   //  New comment!
+};
+
+///////////////////////////////////////////////////////////////////
+//Challenge 5: Max Character
+// Return the character that is most common in a string 
+// ex. maxCharacter('javascript )=== 'a';
+function maxCharacter(str) {
+  
 }
-const outPut = capitalizeLetter('i love javascript');console.log(outPut)
+const outPut = capitalizeLetter('i love javascript');
+console.log(outPut);
   
   
   
