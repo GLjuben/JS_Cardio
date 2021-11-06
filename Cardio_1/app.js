@@ -13,12 +13,11 @@
 // //   return arr;
 // // };
 
-
 // // // var fs=buildFunctions();
 
 // // // fs[0]();
 // // // fs[1]();
-// // // fs[2](); 
+// // // fs[2]();
 
 // // function mapForEach(arr, fn) {
 // //   var newArr=[];
@@ -68,13 +67,11 @@
 // //   console.log(companies[i])
 // // }
 
-
 // //forEach(iterator,index,array)-it is better than for loop,it does not return anything back;elegant way to loop through data;
 // // it takes a callback function (sync callback) and can take in the iterator (company), the index  and the full array as arguments;
 // // companies.forEach(function(company){
 // //   console.log(company.name)
 // // })
-
 
 // //filter() method creates a new array with all elements that pass the test implemented by the provided function.
 
@@ -85,7 +82,6 @@
 // //     canDrink.push(ages[i])
 // //   }
 // // }
-
 
 // //done with filter;
 // // const canDrink = ages.filter(function(age){
@@ -123,14 +119,14 @@
 // //Square each age in the ages array;
 // // Squared each age in the ages array;
 
-// const squaredAge = ages 
+// const squaredAge = ages
 //   .map(age=>Math.sqrt(age))
 //   .map(age=> age*2);
 // // console.log(` The squared age is [${squaredAge}]`);
 
 // //sort()-The sort() method sorts the elements of an array in place and returns the sorted array. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values. The compare function takes two arguments to compare and it returns either 1 or -1 to move the items up and down the array;
 
-// //sort the companies by the start year by putting a comparing function 
+// //sort the companies by the start year by putting a comparing function
 // //in the sort callback in a way whatever we want to compare them;
 
 // const sortedCompanies = companies.sort((c1,c2)=>{
@@ -149,10 +145,7 @@
 // const sortAges =ages.sort((a,b)=> b-a);
 // // console.log(sortAges)
 
-
-
 // //The reduce() method executes a user-supplied “reducer” callback function on each element of the array, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements of the array is a single value.
-
 
 // //add all ages together with for loop:
 // let ageSum = 0;
@@ -179,47 +172,45 @@
 //  .reduce((a,b)=>a+b,0);
 // console.log(combined)
 
-
 // /////////////// Exercises ////////////////////////////////////////////////////////////////////
 
 // Challenge 1: Reverse a String
 //Return a string in reverse
 // ex. reverseString('hello')==='olleh';
-function reverseString(str){
-    let reversedStr=str.split('').reverse().join('');
-    return reversedStr;
+function reverseString(str) {
+  let reversedStr = str.split("").reverse().join("");
+  return reversedStr;
 }
-  
+
 //Challenge 2: Validate a palindrom;
-function isPalindrome(str){
-    let checked = str.split('').reverse().join('')
-    if (str===checked){
-      return 'Is Palindrome'
-    } else{
-      return 'Is not Palindrome'
-    }
+function isPalindrome(str) {
+  let checked = str.split("").reverse().join("");
+  if (str === checked) {
+    return "Is Palindrome";
+  } else {
+    return "Is not Palindrome";
+  }
 }
-  
+
 //Challenge 3: Reverse an integer + add the negative sign with Math.sign()
-function reverseInt(int){
-    const revStr = int.toString().split('').reverse().join('')
-    const revNum = parseInt(revStr) * Math.sign(int);
-    return revNum;
-  
+function reverseInt(int) {
+  const revStr = int.toString().split("").reverse().join("");
+  const revNum = parseInt(revStr) * Math.sign(int);
+  return revNum;
 }
-  
+
 //Challenge 4: Capitalize Letters
 // Return a string with the first letter of every word capitalized;
-function capitalizeLetter(str){
-    // with for loop:
-    //  const strArr = str.toLowerCase().split(' ');
-  
-    //  for(let i=0; i < strArr.length; i++){
-    //    // we are taking the index,plucking away the first letter with substring(0,1) and adding on the rest of the word with substring(1);
-    //    strArr[i] = strArr[i].substring(0,1).toUpperCase()+strArr[i].substring(1);
-    //   } 
-    //  return strArr.join(' ');
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////
+function capitalizeLetter(str) {
+  // with for loop:
+  //  const strArr = str.toLowerCase().split(' ');
+
+  //  for(let i=0; i < strArr.length; i++){
+  //    // we are taking the index,plucking away the first letter with substring(0,1) and adding on the rest of the word with substring(1);
+  //    strArr[i] = strArr[i].substring(0,1).toUpperCase()+strArr[i].substring(1);
+  //   }
+  //  return strArr.join(' ');
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////
   // return str
   //   .toLowerCase()
   //   .split(' ')
@@ -228,56 +219,55 @@ function capitalizeLetter(str){
   //   .join(' ');
   ///////////////////////////////////////////
   //with regex:
-  return str.replace(/\b[a-z]/gi, function(char){
-    return char.toUpperCase(); 
-
+  return str.replace(/\b[a-z]/gi, function (char) {
+    return char.toUpperCase();
   });
   //  New comment!
-};
+}
 
 ///////////////////////////////////////////////////////////////////
 //Challenge 5: Max Character
-// Return the character that is most common in a string 
+// Return the character that is most common in a string
 // ex. maxCharacter('javascript )=== 'a';
-function maxCharacter(str) {
-  const charMap = {};
-  let maxNum = 0;
-  let maxChar = '';
-  str.split('').forEach(char => {
-    if (charMap[char]){
-      charMap[char]++
-    } else {
-      charMap[char]=1;
-    }
-  });
-  // loop throughout the object and find the char with max reps;
-  for (let char in charMap) {
-    if(charMap[char]>maxNum){
-      maxNum = charMap[char];
-      maxChar = char;
-    }
-  }
-  return maxChar;
-}
+// function maxCharacter(str) {
+//   const charMap = {};
+//   let maxNum = 0;
+//   let maxChar = '';
+//   str.split('').forEach(char => {
+//     if (charMap[char]){
+//       charMap[char]++
+//     } else {
+//       charMap[char]=1;
+//     }
+//   });
+//   // loop throughout the object and find the char with max reps;
+//   for (let char in charMap) {
+//     if(charMap[char]>maxNum){
+//       maxNum = charMap[char];
+//       maxChar = char;
+//     }
+//   }
+//   return maxChar;
+// }
 
-// Challenge 6: fizzbuzz;
-// Write a program that prints all the numbers from 1 to 100. For multiples of 3,instead of the number, print "Fizz",for the multiples of 5 print "Buzz".
-// For numbers which are multiple of 3 and 5, print "FizzBuzz".
-function fizzBuzz() {
- for(let i = 1; i<=100; i++){
-    if(i % 3 === 0 && i % 5 === 0 ){
-      console.log('FizzBuzz')
-    }else if(i%3===0){
-     console.log('Fizz');
-   } else if(i%5===0){
-      console.log('Buzz')
-   } else {
-     console.log(i);
-   }
- }
-}
-const outPut = fizzBuzz();
-console.log(outPut)
+// // Challenge 6: fizzbuzz;
+// // Write a program that prints all the numbers from 1 to 100. For multiples of 3,instead of the number, print "Fizz",for the multiples of 5 print "Buzz".
+// // For numbers which are multiple of 3 and 5, print "FizzBuzz".
+// function fizzBuzz() {
+//  for(let i = 1; i<=100; i++){
+//     if(i % 3 === 0 && i % 5 === 0 ){
+//       console.log('FizzBuzz')
+//     }else if(i%3===0){
+//      console.log('Fizz');
+//    } else if(i%5===0){
+//       console.log('Buzz')
+//    } else {
+//      console.log(i);
+//    }
+//  }
+// }
+// const outPut = fizzBuzz();
+// console.log(outPut)
 
 // function digitize(n) {
 //   //code here
@@ -288,20 +278,8 @@ console.log(outPut)
 //   return reversedNum
 // }
 
-digitize(2345123)
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+// digitize(2345123)
+
 // function descendingOrder(n){
 //   let numToStrArr = n.toString().split('').map((n) => parseInt(n));
 //   // console.log(numToStrArr)
@@ -312,7 +290,22 @@ digitize(2345123)
 //   // console.log(sortedArr);
 //   // console.log(finalRes);
 // }
-  
-  
+
 // const outPut = sumDigits(6262);
-  // console.log(outPut)
+// console.log(outPut)
+
+function checkExam(array1, array2) {
+  // good luck
+  let gradeCount = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (array1[i] === array2[i]) {
+      return gradeCount++;
+    } else if (array1[i] !== array2[i]) {
+      return gradeCount--;
+    }
+    return gradeCount;
+  }
+  console.log(gradeCount);
+}
+checkExam(["a", "b", "c", "d", "e"], ["a", "b", "c", "e", ""]);
+console.log(checkExam);
